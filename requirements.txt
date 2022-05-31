@@ -4,7 +4,6 @@ ffmpeg-python
 heroku3
 motor
 Pillow>=5.3.0
-pyaesni
 pymongo
 pymongo[srv]
 python-decouple
