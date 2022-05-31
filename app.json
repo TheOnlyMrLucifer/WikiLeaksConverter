@@ -9,7 +9,7 @@
         "bot"
     ],
     "repository": "https://github.com/TheOnlyMrLucifer/WikiLeaksConverter",
-    "website": "",
+    "website": "https://github.com/TheOnlyMrLucifer/WikiLeaksConverter"",
     "success_url": "https://t.me/WikiLeaksConverterBot",
     "env": {
         "API_HASH": {
@@ -67,12 +67,16 @@
             "value": ""
         }
     },
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        },
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-        }
-    ]
-}
+"addons": [
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
